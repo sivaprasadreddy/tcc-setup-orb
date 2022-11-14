@@ -1,9 +1,8 @@
 version: 2.1
 
 description: >
-  tcc-setup orb will install and start testcontainercloud agent
+  tcc-setup orb will download testcontainercloud agent and start as a background process
 
-# This information will be displayed in the orb registry and is not mandatory.
 display:
   home_url: "https://www.testcontainers.cloud/"
   source_url: "https://github.com/sivaprasadreddy/tcc-setup-orb"
