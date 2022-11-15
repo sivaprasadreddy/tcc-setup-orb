@@ -13,6 +13,8 @@ jobs:
   command-tests:
     docker:
       - image: cimg/openjdk:17.0
+    environment:
+      TC_CLOUD_TOKEN: 'dummy-token'
     steps:
       - checkout
       # Run your orb's commands to validate them.
