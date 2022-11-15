@@ -4,10 +4,3 @@ steps:
     - run:
         name: Install TC Agent
         command: <<include(scripts/install.sh)>>
-    - run:
-        name: Start TC Agent
-        command: "/tmp/agent"
-        background: true
-    - run:
-        name: "Wait for TC Agent to start"
-        command: /tmp/agent wait

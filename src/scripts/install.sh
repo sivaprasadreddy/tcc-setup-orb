@@ -8,7 +8,7 @@ curl -L -o /tmp/agent https://app.testcontainers.cloud/download/testcontainers-c
 chmod +x /tmp/agent
 
 # start agent as background process
-#/tmp/agent &
+/tmp/agent &
 
 # make sure TCC is ready before proceeding
-#/tmp/agent wait
+/tmp/agent wait
