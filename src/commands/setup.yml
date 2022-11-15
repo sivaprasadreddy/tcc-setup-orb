@@ -1,0 +1,17 @@
+description: >
+  This command install Testcontainers Cloud agent and start it as a background process.
+steps:
+  - run:
+      - run:
+          name: Install TC Agent
+          command: >-
+            suffix=$([[ $(uname -m) == "aarch64" || $(uname -m) == "arm64" ]] && echo "arm64" || echo "x86-64") &&
+            curl -L -o /tmp/agent https://app.testcontainers.cloud/download/testcontainers-cloud-agent_linux_$suffix && 
+            chmod +x /tmp/agent
+      - run:
+          name: Start TC Agent
+          command: "/tmp/agent"
+          background: true
+      - run:
+          name: "Wait for TC Agent to start"
+          command: /tmp/agent wait
